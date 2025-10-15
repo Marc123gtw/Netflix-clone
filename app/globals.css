@@ -2,15 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-   @apply bg-zinc-900 h-full overflow-x-hidden;
-} 
+/* Подключаем шрифты Geist через Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Sans&family=Geist+Mono&display=swap');
 
+:root {
+  --font-geist-sans: 'Geist Sans', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+}
+
+body {
+  @apply bg-zinc-900 h-full overflow-x-hidden;
+  font-family: var(--font-geist-sans);
+}
 
 #__next {
-    @apply h-full;
+  @apply h-full;
 }
 
 html {
-    @apply h-full;
-} 
+  @apply h-full;
+}
